@@ -1,16 +1,16 @@
-const input1 = 'abcbacabcbcabcbaba'
-const input2 = 'abcbacabcqbcabcbnaba'
+const input1 = 'abcbacabcbcabcbaba';
+const input2 = 'abcbacabcqbcabcbnaba';
 
 const checkSymbol =(str) => {
   for(const item of str) {
       if (item !== 'a' && item !=='b'&& item !== 'c'){
     
-        return false
+        return false;
     }
   }
 
-return true
+return true;
 }
 
-console.log(checkSymbol(input1))
-console.log(checkSymbol(input2))
+console.log(checkSymbol(input1));
+console.log(checkSymbol(input2));
