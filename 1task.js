@@ -1,14 +1,24 @@
-const elements = [6, 43, -6, 3, 0, 5, 2, 7]
+const elements = [6, 43, -6, 3, 0, 5, 2, 7];
 
 const sortElements = (arr, direction) => {
-  if (direction === 'increasing') {
-    return arr.sort((a, b) => a - b)
+  const sortedArray = [...arr];
+  switch (direction) {
+    case 'asc':
+      sortedArray.sort((a, b) => a - b);
+
+      return sortedArray;
+    case 'desc':
+      sortedArray.sort((a, b) => b - a);
+
+      return sortedArray;
+    default:
+
+      return sortedArray;
   }
-  else {
-    return arr.sort((a, b) => b - a)
-  }
-  }
-const sortedIncreasing = sortElements(elements, 'increasing')
-console.log(sortedIncreasing)
-const sortedDecreasing = sortElements(elements)
-console.log(sortedDecreasing)
+};
+
+const sortedArrayAsc = sortElements(elements, 'asc');
+console.log(sortedArrayAsc);
+
+const sortedArrayDesc = sortElements(elements, 'desc');
+console.log(sortedArrayDesc);
