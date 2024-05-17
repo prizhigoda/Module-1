@@ -1,9 +1,9 @@
-const fillArray = (n) => {
+const fillArray = (inputArrLenght) => {
   const arr = [];
-  let s = "";
+  let result = '';
 
-  while (arr.length < n) {
-    arr.push((s += "x"));
+  while (arr.length < inputArrLenght) {
+    arr.push((result += 'x'));
   }
 
   return arr;
