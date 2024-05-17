@@ -1,16 +1,23 @@
-const example1 = [['cat', 5], ['dog', 6], ['cat', 11]];
-const result1 = arrayToObject(example1);
+const input1 = [
+  ["cat", 5],
+  ["dog", 6],
+  ["cat", 11],
+];
 
-const example2 = [['name', 'test'], ['age', 12], ['country', 'RF']];
-const result2 = arrayToObject(example2);
+const input2 = [
+  ['name', 'test'],
+  ['age', 12],
+  ['country', 'RF'],
+];
 
-function arrayToObject(pairsArray) {
-    return pairsArray.reduce((acc, [key, value]) => {
-        acc[key] = value;
+const sortDeleteArrayDublicate = (pairsArray) => {
 
-        return acc;
-    }, {})
-}
+  return pairsArray.reduce((acc, [key, value]) => {
+    acc[key] = value;
 
-console.log(result1);
-console.log(result2);
+    return acc;
+  }, {});
+};
+
+console.log(sortDeleteArrayDublicate(input1));
+console.log(sortDeleteArrayDublicate(input2));
