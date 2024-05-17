@@ -6,14 +6,14 @@ const enumerationSymbol = (str) => {
   for (const item of str) {
     switch (item) {
       case '_':
-        result = result + '0';
+        result += '0';
         break;
       case '-':
-        result = result + '1';
+        result += '1';
         break;
     }
   }
-  
+
   return result;
 };
 
