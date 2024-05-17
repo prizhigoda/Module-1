@@ -11,7 +11,8 @@ const replaceNumber = (arr) => {
     if (array[i] < min) {
       min = array[i];
       minIndex = i;
-    } else if (array[i] > max) {
+    }
+    if (array[i] > max) {
       max = array[i];
       maxIndex = i;
     }
@@ -21,4 +22,5 @@ const replaceNumber = (arr) => {
 
   return arr;
 };
+
 console.log(replaceNumber(array));
