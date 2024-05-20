@@ -1,19 +1,21 @@
-const input = [
+const orderByName = [
   { name: 'test', price: 200 },
   { name: 'test1', price: 300 },
   { name: 'test', price: 100 },
   { name: 'test', price: 600 },
 ];
 
-const groupOrdersByName = (input) => {
+const groupOrdersByName = (arrayOfObjects) => {
+
   const arr = [];
-  const newObject = input.reduce((acc, obj) => {
-    if (acc[obj.name]) {
-      acc[obj.name].price += obj.price;
-    } else acc[obj.name] = obj;
+  const newObject = arrayOfObjects.reduce((acc, obj) => {
+    acc[obj.name] 
+      ? acc[obj.name].price += obj.price 
+      : acc[obj.name] = obj;
 
     return acc;
   }, {});
+
   for (key in newObject) {
     arr.push(newObject[key]);
   }
@@ -21,4 +23,4 @@ const groupOrdersByName = (input) => {
   return arr;
 };
 
-console.log(groupOrdersByName(input));
+console.log(groupOrdersByName(orderByName));
