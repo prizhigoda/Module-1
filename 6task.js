@@ -7,15 +7,15 @@ const input = [
 
 const groupOrdersByName = (input) => {
   const arr = [];
-  const superObject = input.reduce((acc, obj) => {
+  const newObject = input.reduce((acc, obj) => {
     if (acc[obj.name]) {
       acc[obj.name].price += obj.price;
     } else acc[obj.name] = obj;
 
     return acc;
   }, {});
-  for (key in superObject) {
-    arr.push(superObject[key]);
+  for (key in newObject) {
+    arr.push(newObject[key]);
   }
 
   return arr;
