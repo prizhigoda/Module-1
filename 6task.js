@@ -6,8 +6,8 @@ const orderByName = [
 ];
 
 const groupOrdersByName = (arrayOfObjects) => {
-
   const arr = [];
+  
   const newObject = arrayOfObjects.reduce((acc, obj) => {
     acc[obj.name] 
       ? acc[obj.name].price += obj.price 
