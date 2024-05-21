@@ -6,23 +6,23 @@ const collection = [
   { name: '', age: null, country: 'RF' },
 ];
 
-const sortCollectionFromEmptyObject = (input) => {
-  
-  return newObject = input.reduce((acc, obj) => {
-    let hasValue = false;
+const sortCollectionFromEmptyObject = (collection) => {
+  return newObject = collection.reduce((acc, obj) => {
+    let isValue = false;
 
     for (key in obj) {
-      if (obj[key] !== '' && obj[key] !== null && obj[key] !== undefined) {
-        hasValue = true;
+      if (!obj[key]) {
+        isValue = true;
         
         break;
       } 
     }
-    if (hasValue){
-      acc.push(obj)
+    
+    if (isValue){
+      acc.push(obj);
     }
 
-    return acc
+    return acc;
   }, []);
 };
 
