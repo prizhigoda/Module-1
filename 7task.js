@@ -11,7 +11,7 @@ const sortCollectionFromEmptyObject = (collection) => {
     let isValue = false;
 
     for (key in obj) {
-      if (!obj[key]) {
+      if (obj[key]) {
         isValue = true;
         
         break;
