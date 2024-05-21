@@ -3,13 +3,12 @@ const array = [
   { name: 'height', value: 100 },
 ];
 
-const arrayToObject = (input) => {
+const TransformArrayToObject = (input) => {
+  return (newArray = input.reduce((acc, obj) => {
+    acc[obj.name] = obj.value;
 
-  return newArray = input.reduce((acc, obj) => {
-    acc[obj.name] = obj.value
+    return acc;
+  }, {}));
+};
 
-    return acc
-  }, {})
-}
-
-console.log(arrayToObject(array))
+console.log(TransformArrayToObject(array));
