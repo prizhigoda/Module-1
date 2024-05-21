@@ -8,18 +8,13 @@ const collection = [
 
 const sortCollectionFromEmptyObject = (collection) => {
   return newObject = collection.reduce((acc, obj) => {
-    let isValue = false;
 
     for (key in obj) {
       if (obj[key]) {
-        isValue = true;
+        acc.push(obj)
         
         break;
       } 
-    }
-    
-    if (isValue){
-      acc.push(obj);
     }
 
     return acc;
