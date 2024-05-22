@@ -4,16 +4,19 @@ const arr = [
   {name: 'test1', age: 54, country: 'RF'}
 ];
 
-const sortArrayToAscOrDesc = (arr, sort = 'asc') => {
-  const newArray = arr.slice().sort((a, b) => {
-    if(a.age > b.age) return sort === 'asc' ? 1 : -1;
+const sortArrayToAscOrDesc = (arr, property, sort = 'asc') => {
+  const newArray = [...arr].sort((a, b) => {
+
+    if(a[property] > b[property]) 
+      return sort === 'asc' ? 1 : -1;
     
-    if(a.age < b.age) return sort === 'desc' ? 1 : -1;
+    if(a[property] < b[property]) 
+      return sort === 'desc' ? 1 : -1;
 
     return 0;
   });
   
   return newArray
 }
-console.log(sortArrayToAscOrDesc(arr, 'asc'));
-console.log(sortArrayToAscOrDesc(arr, 'desc'));
+console.log(sortArrayToAscOrDesc(arr, 'age', 'asc'));
+console.log(sortArrayToAscOrDesc(arr, 'age', 'desc'));
